@@ -219,7 +219,7 @@ $darkColor: #2f2d52;
               display: block;
               word-break: break-all;
               background-color: white;
-              padding: 10px 30px;
+              padding: 10px 20px;
               border-radius: 0px 10px 10px 10px;
             }
 
@@ -230,9 +230,8 @@ $darkColor: #2f2d52;
           &.owner {
             flex-direction: row-reverse;
             .messageContent {
-              align-items: flex-end;
               p {
-                text-align: right;
+                text-align: start;
                 background-color: #8da4f1;
                 color: white;
                 border-radius: 10px 0px 10px 10px;
