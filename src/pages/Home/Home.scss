@@ -216,8 +216,8 @@ $darkColor: #2f2d52;
             p {
               max-width: 100%;
               text-align: start;
-              overflow-x: hidden;
-              text-overflow: ellipsis;
+              display: block;
+              word-break: break-all;
               background-color: white;
               padding: 10px 30px;
               border-radius: 0px 10px 10px 10px;
