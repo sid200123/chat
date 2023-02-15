@@ -1,3 +1,4 @@
+import { format } from "date-fns";
 import { doc, onSnapshot } from "firebase/firestore";
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
@@ -20,7 +21,7 @@ const Message = ({ message }) => {
       ref={ref}
       className={`message ${message.senderId === currentUser.uid && "owner"}`}
     >
-      <div className="messageInfo">
+      <div className="messageInfo text-center">
         <img
           src={
             message.senderId === currentUser.uid
@@ -29,7 +30,15 @@ const Message = ({ message }) => {
           }
           alt=""
         />
-        <span>Just Now</span>
+        <span
+          style={{ fontSize: "10px" }}
+          className="d-flex justify-content-center"
+        >
+          {format(message.date.toDate(), "dd/MM/yyyy") ===
+          format(new Date(), "dd/MM/yyyy")
+            ? "Today"
+            : format(message.date.toDate(), "dd/MM/yyyy")}
+        </span>
       </div>
       <div className="messageContent">
         <p>{message.text}</p>
