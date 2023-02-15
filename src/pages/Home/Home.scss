@@ -134,14 +134,14 @@ $darkColor: #2f2d52;
           }
           .userChatInfo {
             max-width: 70%;
-            // overflow-wrap: break-word;
-            overflow-x: hidden;
-            text-overflow: ellipsis;
             span {
               font-size: 18px;
               font-weight: 500;
             }
             p {
+              max-width: 95%;
+              overflow-x: hidden;
+              // text-overflow: ellipsis;
               font-size: 14px;
               color: lightgray;
             }
@@ -209,20 +209,18 @@ $darkColor: #2f2d52;
             }
           }
           .messageContent {
-            max-width: 100%;
+            max-width: 50%;
             display: flex;
             flex-direction: column;
             gap: 10px;
-
             p {
-              max-width: 80%;
-              text-overflow: ellipsis;
-              white-space: pre-wrap;
+              max-width: 100%;
+              text-align: start;
               overflow-x: hidden;
+              text-overflow: ellipsis;
               background-color: white;
-              padding: 10px 20px;
+              padding: 10px 30px;
               border-radius: 0px 10px 10px 10px;
-              max-height: fit-content;
             }
 
             img {
@@ -234,6 +232,7 @@ $darkColor: #2f2d52;
             .messageContent {
               align-items: flex-end;
               p {
+                text-align: right;
                 background-color: #8da4f1;
                 color: white;
                 border-radius: 10px 0px 10px 10px;
