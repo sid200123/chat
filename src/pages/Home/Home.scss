@@ -135,7 +135,7 @@ $darkColor: #2f2d52;
           .userChatInfo {
             max-width: 70%;
             // overflow-wrap: break-word;
-            // overflow-x: hidden;
+            overflow-x: hidden;
             text-overflow: ellipsis;
             span {
               font-size: 18px;
